@@ -6,5 +6,10 @@
     "require": {},
     "config": {
         "cache-dir": "/tmp"
+    },
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
     }
 }
