@@ -1,3 +1,4 @@
 /src/vendor
 /src/.composer
-/src/bash_history
+/src/.bash_history
+/src/xdebug.log
