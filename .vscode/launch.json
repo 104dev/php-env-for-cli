@@ -5,12 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Listen for Xdebug",
-            "type": "php",
-            "request": "launch",
-            "port": 9003
-        },
-        {
             "name": "Launch currently open script",
             "type": "php",
             "request": "launch",
@@ -22,8 +16,12 @@
             ],
             "env": {
                 "XDEBUG_MODE": "debug,develop",
-                "XDEBUG_CONFIG": "client_port=${port}"
-            }
+                "XDEBUG_CONFIG": "client_port=${port}",
+                "XDEBUG_TRIGGER": "VSCODE"
+            },
+            "pathMappings": {
+                "/home/user" : "${workspaceFolder}/src"
+            },
         }
     ]
 }
