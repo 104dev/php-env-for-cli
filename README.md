@@ -1,4 +1,4 @@
-## 実行方法
+## 環境構築
 
 ### ビルド例
 
@@ -31,3 +31,37 @@ docker rm -f  php-cli-env
 composer install && composer dump-autoload
 ```
 
+## PHPUnitの実行方法
+
+### 基本形
+
+```
+./vendor/bin/phpunit tests/*Test.php
+```
+
+### 実行結果に色をつける
+
+```
+./vendor/bin/phpunit --color tests/*Test.php
+```
+
+### エイリアスを設定してphpunitコマンドから実行
+
+```
+alias phpunit='./vendor/bin/phpunit'
+```
+※Dockerfileに記載済み
+
+### シェルスクリプトを使用してコマンド入力を省略
+
+ファイルの作成
+```bash
+#!/bin/sh
+
+./vendor/bin/phpunit --colors tests/*Test.php
+```
+
+実行
+```
+./test_runner.sh
+```
