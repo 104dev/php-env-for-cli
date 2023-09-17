@@ -27,3 +27,4 @@ EXPOSE 9000
 
 USER $USERNAME
 
+RUN alias phpunit='./vendor/bin/phpunit'
